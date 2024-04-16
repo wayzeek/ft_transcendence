@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+ frontend:
+    container_name: frontend
+    build: ./frontend
+    depends_on:
+      - backend
+    env_file:
+      - ./.env
+    ports:
+      - "4430:443"
+    networks:
+      - network-transcendence
+    restart: always
+    
+
+ backend:
+    container_name: backend
+    build: ./backend
+    depends_on:
+      - database
+    env_file: ./.env
+    networks:
+      - network-transcendence
+    expose:
+      - 8000
+    volumes:
+      - ./backend/:/app/
+    restart: always
+
+ database:
+    container_name: database
+    build: ./database
+    env_file: ./.env
+    networks:
+      - network-transcendence
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    restart: always
+
+volumes:
+ postgres_data:
+    name: postgres_data
+
+networks:
+ network-transcendence:
+    name: network-transcendence
+    driver: bridge

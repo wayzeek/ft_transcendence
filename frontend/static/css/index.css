@@ -1,0 +1,132 @@
+body {
+    background-color: #08212C;
+	height: 100%;
+}
+ 
+.title {
+    font-family: 'Zen Dots', sans-serif;
+    font-size: 7vw; /* Adjust this value to your liking */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FCF1A2;
+    text-shadow: 0 0 10px #FB1075, 0 0 20px #FB1075, 0 0 30px #FB1075, 0 0 40px #FB1075;
+    animation: glow 2s infinite;
+}
+
+
+.pt-5 {
+    padding-top: 4vw;
+}
+   
+
+.connection-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3vw;
+    color: #FB1075;
+}
+
+.connection-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.connection-option {
+
+    display: block;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2vw;
+    padding-bottom: 1vw;
+    text-transform: uppercase;
+    color: #FFE967;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.connection-option:before {
+    content: "";
+    position: absolute;
+    left: -1em;
+}
+   
+.connection-option:hover:before, .connection-option:focus:before {
+    content: ">";
+}
+
+.connection-option:hover, .connection-option:focus {
+    color: #FB1075;
+    animation: twinkle 1.5s infinite;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@keyframes twinkle {
+    0%, 100% {color: #FB1075;}
+    50% {color: #FFE967;}
+}
+
+@keyframes glow {
+    0% {text-shadow: 0 0 10px #FB1075, 0 0 20px #FB1075, 0 0 30px #FB1075, 0 0 40px #FB1075;}
+    50% {text-shadow: 0 0 20px #FB1075, 0 0 30px #FB1075, 0 0 40px #FB1075, 0 0 50px #FB1075, 0 0 60px #FB1075;}
+    100% {text-shadow: 0 0 10px #FB1075, 0 0 20px #FB1075, 0 0 30px #FB1075, 0 0 40px #FB1075;}
+}
+
+
+
+.alias {
+    display: block;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1vw;
+    padding-bottom: 1vw;
+    text-transform: uppercase;
+    color: #FFE967;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-top: 3vh;
+}
+
+/* .nextUser {
+    position: absolute;
+    top: 90vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+  
+    font-family: "Press Start 2P", serif;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #0d3749;
+    color: green;
+    border-radius:  5vh;
+    border-color: green;
+    font-size: 2vh;
+  } */
+
+  .nextUser {
+    position: absolute;
+    top: 90vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    font-family: "Press Start 2P", sans-serif; /* Changed to sans-serif for better readability */
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #0d3749;
+    color: #fff; /* Changed to white for better contrast */
+    border-radius: 10px; /* Increased border radius for smoother corners */
+    border: 2px solid green; /* Added border for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+    font-size: 1.5rem; /* Increased font size for better readability */
+    max-width: 80%; /* Limiting width for better responsiveness */
+  }
+
+  .blurred {
+    filter: blur(20px);
+}

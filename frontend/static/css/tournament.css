@@ -1,0 +1,188 @@
+body {
+  background: #08212C;
+  font-family: "Courier New";
+  font-weight: bold;
+}
+
+.bracket {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.bracket .round {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bracket .round .winners > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bracket .round .winners > div.matchups .matchup:last-child {
+  margin-bottom: 0 !important;
+}
+.bracket .round .winners > div.matchups .matchup .participants {
+  border-radius: 2vh;
+  overflow: hidden;
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant {
+  box-sizing: border-box;
+  color: #F3970E;
+  border-left: 0.5vh solid #F3970E;
+  background: white;
+  width: 28vh;
+  height: 6vh;
+  box-shadow: 0 4vh 4vh 0 rgba(0, 0, 0, 0.12);
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant.winner {
+  color: #FB1075;
+  border-color: #FB1075;
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant.loser {
+  color: #dc563f;
+  border-color: #dc563f;
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant:not(:last-child) {
+  border-bottom: thin solid #f0f2f2;
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant span {
+  margin: 0 2.5vh;
+  line-height: 6vh;
+  font-size: 2vh;
+}
+
+.bracket .round .winners > div.connector.filled .line,
+.bracket .round .winners > div.connector.filled.bottom .merger:after,
+.bracket .round .winners > div.connector.filled.top .merger:before {
+  border-color: #FB1075;
+}
+.bracket .round .winners > div.connector .line,
+.bracket .round .winners > div.connector .merger {
+  box-sizing: border-box;
+  width: 10vh;
+  display: inline-block;
+  vertical-align: top;
+}
+.bracket .round .winners > div.connector .line {
+  border-bottom: thin solid #00ACE5;
+  height: 8vh;
+}
+.bracket .round .winners > div.connector .merger {
+  position: relative;
+  height: 16vh;
+}
+.bracket .round .winners > div.connector .merger:before,
+.bracket .round .winners > div.connector .merger:after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50%;
+  border: 0 solid;
+  border-color: #00ACE5;
+}
+.bracket .round .winners > div.connector .merger:before {
+  border-right-width: thin;
+  border-top-width: thin;
+}
+.bracket .round .winners > div.connector .merger:after {
+  border-right-width: thin;
+  border-bottom-width: thin;
+}
+.bracket .round.quarterfinals .winners:not(:last-child) {
+  margin-bottom: 20vh;
+}
+.bracket .round.quarterfinals .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 4vh;
+}
+.bracket .round.semifinals .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 36vh;
+}
+.bracket .round.semifinals .winners .connector .merger {
+  height: 48vh;
+}
+.bracket .round.semifinals .winners .connector .line {
+  height: 24vh;
+}
+.bracket .round.finals .winners .connector .merger {
+  height: 12vh;
+}
+.bracket .round.finals .winners .connector .line {
+  height: 6vh;
+}
+
+/* jo css */
+
+.form-control {
+  font-size: 2vh;
+  color: #F3970E;
+}
+
+.winner > input{
+  color: #FB1075;
+}
+
+/* prevent blue outline on focus*/
+.form-control:focus {
+  border: white;
+  box-shadow: none;
+}
+
+.confirmNickname, .startGame, .endGame {
+  display: none;
+  position: absolute;
+  top: 55vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+
+  font-family: "Press Start 2P", serif;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #0d3749;
+  color: #FCF1A2;
+  border-radius:  5px;
+  border-color: #FCF1A2;
+  font-size: 2vh;
+}
+
+#error-field {
+  color: red;
+}
+
+.button {
+  font-size: 0.7em;
+  color: #FCF1A2;
+  padding: 0.7em;
+  border: 2px solid #FCF1A2;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #08212C;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.dot {
+  animation: blink 1s infinite;
+  display: inline-block;
+}
+
+.view-link {
+  color: #0784c3;
+  text-decoration: underline;
+}
+
+/* This ensures each dot blinks at a different time */
+.dot:nth-child(1) { animation-delay: 0s; }
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
