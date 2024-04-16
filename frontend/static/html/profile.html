@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pong</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap">
+</head>
+<body>
+	<div class="profile-page">
+		<h1 class="profile-title" data-i18n="my-profile">MY PROFILE</h1>
+		<div class="profile-content">
+			<div class="profile-photo" id="photo-div">
+				<img class="mb-4" id="profile_img">
+				<div class="pdp-actions">
+					<form id='pdpForm' enctype="multipart/form-data" class="form">
+						<label class="button change-button-form">
+							<input type="file" accept="image/png, image/jpeg" id='select-pdp' style="display: none;" onchange="this.form.requestSubmit()"/>
+							<a data-i18n="change-avatar">CHANGE AVATAR</a>
+						</label>
+					</form>
+					<button class='button' id='delete-pdp' data-i18n="delete">DELETE</button>
+				</div>
+			</div>
+			<div class="profile-info" id="base_info">
+				<form id="infoForm">
+					<div class="info pb-5" id="username_42">
+                		<label class="profile name" data-i18n="username">USERNAME: </label>
+						<input onkeyup="this.value = this.value.toUpperCase()" style='text-transform:uppercase' class="profile-input name-input" id="username" autocomplete="off" required></input>
+						<button type="submit" class="button change" id="saveButton" data-i18n="save">SAVE</button>
+					</div>
+					<div class="stats pb-5">
+						<p class="data played" data-i18n="played">GAMES PLAYED:</p>
+						<p class="data won" data-i18n="won">GAMES WON:</p>
+						<p class="data lost" data-i18n="lost">GAMES LOST:</p>
+					</div>
+
+					<div class="pb-5">
+						<p class="pb-2"><span class="button" id="history_button" data-i18n="game-history">GAME HISTORY</span></p>
+						<p><span class="button" id="password_button" data-i18n="change-password">CHANGE PASSWORD</span></p>
+						<p class="pb-2"><span class="button" id="blockchain_button" data-i18n="see-tournament">TOURNAMENT HISTORY</span></p>
+					</div>
+				</form>
+			</div>
+			<div class="profile-info" id="pass_info" style="display: none;">
+				<form id="passForm">
+					<div class="info">
+						<label class="profile pass" data-i18n="old-password">OLD PASSWORD: </label>
+						<input id="old_pass" type="password" class="profile-input" autocomplete="off"></input>
+					</div>
+					<div class="info" id="username_42">
+						<label class="profile pass" data-i18n="new-password">NEW PASSWORD: </label>
+						<input id="new_pass" type="password" class="profile-input" autocomplete="off"></input>
+					</div>
+					<div class="info" id="username_42">
+						<label class="profile pass" data-i18n="confirm-password-bis">CONFIRM PASSWORD: </label>
+						<input id="conf_pass" type="password" class="profile-input" autocomplete="off"></input>
+					</div>
+					<button type="submit" class="button change" id="savePassButton" data-i18n="save">SAVE</button>
+					<button class="button" id="returnButton" data-i18n="back">BACK</button>
+				</form>
+			</div>
+		<span id="backButton" class="button back" onclick="navigate('/menu')" data-i18n="back">BACK</span>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS for Flag -->
+
+</head>
+<body>
+
+
+<div id="languages" class="position-absolute top-0 end-0 mt-2 me-2">
+    <img src="../assets/france.png" id="french" alt="french flag">
+    <img src="../assets/italia.png" id="italian" alt="italian flag">
+    <img src="../assets/uk.png" id="english" alt="united kingdom flag">
+</div>
+
+    <!-- Content -->
+    <h1 class="title pt-5" id="title" data-i18n="title"></h1>
+    <div style="padding-top: 8vh;"></div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-10 text-center">
+                <h2 class="connection-title" id="connection-title"></h2>
+                <div style="padding-top: 10vh;"></div>
+                <div class="connection-options">
+                    <span class="connection-option" tabindex="0"><a onclick="navigate('/quick_play', ['single_player'])" id="quick-play" data-i18n="quick-play"></a></span>
+                    <span class="connection-option" tabindex="0"><a onclick="navigate('/two_players', ['two_players'])" id="two-players" data-i18n="two-player"></a></span>
+                    <span class="connection-option" tabindex="0"><a onclick="navigate('/login_tournament')" id="tournament" data-i18n="tournament"></a></span>
+                    <span class="connection-option" tabindex="0"><a onclick="navigate('/social')" id="friends" data-i18n="friends"></a></span>
+                    <span class="connection-option" tabindex="0"><a onclick="navigate('/profile')" id="profile" data-i18n="profile"></a></span>
+                    <span class="connection-option" id ="logoutButton" tabindex="0"><a id="logout" data-i18n="logout"></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

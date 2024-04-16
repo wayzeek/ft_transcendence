@@ -1,0 +1,191 @@
+/* Body Styles */
+body {
+    background-color: #08212C;
+}
+
+/* Profile Page Styles */
+.profile-page {
+    width: 100%;
+    max-width: 1000px; /* Increased max-width */
+    margin: 0 auto;
+}
+
+/* Profile Title Styles */
+.profile-title {
+    font-family: 'Zen Dots', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FCF1A2;
+    margin-left: 100px; /* Increased margin */
+    margin-right: 100px; /* Increased margin */
+    margin-bottom: 100px; /* Increased margin */
+    margin-top: 50px; /* Increased margin */
+    padding: 10px; /* Increased padding */
+    background-color: #FB1075;
+    border: 3px solid #FCF1A2; /* Increased border */
+    border-radius: 20px; /* Increased border radius */
+}
+
+/* Profile Content Styles */
+.profile-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Profile Photo Styles */
+.profile-photo {
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    flex: 1;
+    margin-right: 200px; /* Increased margin */
+    margin-left: 100px; /* Increased margin */
+}
+
+.profile-photo img {
+    margin-left: 20px;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+
+/* Profile Info Styles */
+.profile-info {
+    margin-top: 80px; /* Increased margin */
+    font-family: 'Press Start 2P', cursive;
+    color: #FCF1A2;
+    flex: 2;
+}
+
+/* Data Styles */
+.data {
+    font-size: 20px; /* Doubled font size */
+}
+
+/* Info Styles */
+.info {
+    display: flow;
+    margin-bottom: 20px; /* Increased margin */
+}
+
+/* Profile Styles */
+.profile {
+    height: 40px; /* Increased height */
+    font-size: 20px; /* Doubled font size */
+    flex: 2;
+}
+
+/* Profile Input Styles */
+.profile-input {
+    height: 10px; /* Increased height */
+    /* font-size: 20px; Doubled font size */
+    width: 270px; /* Increased width */
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    color: #FCF1A2;
+    background-color: #08212C;
+    border: 3px solid #FCF1A2;
+    border-radius: 15px;
+    padding: 5%; /* Increased padding */
+}
+
+/* Change Button Form Styles */
+.change-button-form {
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FCF1A2;
+    padding: 10px; /* Increased padding */
+    border: 3px solid #FCF1A2; /* Increased border */
+    border-radius: 20px; /* Increased border radius */
+    cursor: pointer;
+    background-color: #08212C;
+    margin-top: 6px; /* Increased margin */
+}
+
+/* Form Styles */
+.form {
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FCF1A2;
+    background-color: #08212C;
+}
+
+/* PDP Actions Styles */
+.pdp-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Button Styles */
+.button {
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FCF1A2;
+    padding: 10px; /* Increased padding */
+    border: 3px solid #FCF1A2; /* Increased border */
+    border-radius: 20px; /* Increased border radius */
+    cursor: pointer;
+    background-color: #08212C;
+    margin-top: 10px; /* Increased margin */
+}
+
+
+/* Change Button Styles */
+.change {
+    margin-left: 200px; /* Increased margin */
+}
+
+/* Back Button Styles */
+.back {
+    margin-left: 800px; /* Increased margin */
+}
+
+/* Avatar Styles */
+.avatar {
+    margin-left: 150px; /* Increased margin */
+    margin-top: 40px; /* Increased margin */
+}
+
+/* Button Hover and Focus Styles */
+.button:hover, .button:focus {
+    color: #FB1075;
+    animation: twinkle 1.5s infinite;
+}
+
+/* Responsive Styles */
+
+/* For small screens */
+@media only screen and (max-width: 1200px) {
+    .profile-title {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-photo {
+        width: 200px; /* Decreased width */
+        height: 200px; /* Decreased height */
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-info {
+        margin-top: 20px;
+    }
+
+    .back {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}

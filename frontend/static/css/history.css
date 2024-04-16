@@ -1,0 +1,147 @@
+body {
+    background-color: #08212C;
+	color : #FCF1A2;
+}
+
+.history-page {
+	font-family: 'Press Start 2P', cursive;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.history-title {
+	font-family: 'Zen Dots', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: #FCF1A2;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	padding: 5px;
+	background-color: #FB1075;
+	border: 3px solid #FCF1A2;
+	border-radius: 10px;
+	width: fit-content;
+}
+
+.history-content {
+	margin-top: 20px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+	text-transform: uppercase;
+	text-align: center;
+	color: #FCF1A2;
+	padding: 5px;
+	border: 3px solid #FCF1A2;
+	border-radius: 10px;
+   	cursor: pointer;
+   	background-color: #08212C;
+	margin-top: 5px;
+}
+
+.back {
+	margin-left: 600px;
+}
+
+.tourna {
+	margin-left: 360px;
+}
+
+.button:hover, .button:focus {
+	color: #FB1075;
+	animation: twinkle 1.5s infinite;
+}
+
+.no-games {
+	color: white;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.games {
+	text-align: center;
+	color: #FCF1A2;
+	padding: 5px;
+	border: 3px solid #FCF1A2;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+	width: 600px;
+}
+
+.no-tournaments {
+	color: white;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.tournament {
+	text-align: center;
+	color: #FCF1A2;
+	padding: 5px;
+	border: 3px solid #FCF1A2;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+	width: 600px;
+}
+
+.win {
+	background-color: #5cb85c;
+}
+
+.loose {
+	background-color: #ff0033;
+}
+
+@keyframes blink {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0; }
+}
+  
+.loading span {
+	animation: blink 1.4s infinite;
+}
+  
+.loading span:nth-child(2) {
+	animation-delay: 0.2s;
+}
+  
+.loading span:nth-child(3) {
+	animation-delay: 0.4s;
+}
+
+.tournament .arrow {
+    float: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tournament.collapsed .arrow {
+    transform: rotate(90deg);
+}
+
+.button-container .button {
+    display: block;
+}
+
+.tournament-history {
+	background-color: #08212C;
+	text-align: center;
+	color: #FCF1A2;
+	padding: 5px;
+	border: 3px solid #FCF1A2;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+	width: 600px;
+}

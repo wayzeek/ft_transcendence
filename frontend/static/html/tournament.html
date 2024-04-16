@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Pong</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/tournament.css">
+	<link rel="stylesheet" type="text/css" href="../css/pong.css">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700">
+	<link type="text/css" rel="stylesheet" href="../css/tournament.css">
+</head>
+
+<body>
+
+<h1 id='tournament' class="title" data-i18n="tournament" style="font-size: 6vh; padding: 5vh 0;">Tournament</h1>
+<!-- <h3 class="pt-5"></h3> -->
+<div class="bracket">
+	<section class="round quarterfinals">
+		<div class="winners">
+			<div class="matchups">
+				<div class="matchup">
+					<div class="participants">
+						<div class="participant winner input-group">
+							<input id='player1' type="text" class="form-control" value="Guest1" disabled>
+						</div>
+						<div class="participant input-group">
+							<input id='player2' type="text" class="form-control" value="Guest2" disabled>
+						</div>
+					</div>
+				</div>
+				<div class="matchup">
+					<div class="participants">
+						<div class="participant input-group">
+							<input id='player3' type="text" class="form-control" value="Guest3" disabled>
+						</div>
+						<div class="participant winner input-group">
+							<input id='player4' type="text" class="form-control" value="Guest4" disabled>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="connector">
+				<div class="merger"></div>
+				<div class="line"></div>
+			</div>
+		</div>
+		<div class="winners">
+			<div class="matchups">
+				<div class="matchup">
+					<div class="participants">
+						<div class="participant input-group">
+							<input id='player5' type="text" class="form-control" value="Guest5" disabled>
+						</div>
+						<div class="participant winner input-group">
+							<input id='player6' type="text" class="form-control" value="Guest6" disabled>
+						</div>
+					</div>
+				</div>
+				<div class="matchup">
+					<div class="participants">
+						<div class="participant input-group">
+							<input id='player7' type="text" class="form-control" value="Guest7" disabled>
+						</div>
+						<div class="participant winner input-group">
+							<input id='player8' type="text" class="form-control" value="Guest8" disabled>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="connector">
+				<div class="merger"></div>
+				<div class="line"></div>
+			</div>
+		</div>
+	</section>
+	<section class="round semifinals">
+		<div class="winners">
+			<div class="matchups">
+				<div class="matchup">
+					<div class="participants">
+						<div class="participant winner"><span id="player1semifinals" ></span></div>
+						<div class="participant"><span id="player2semifinals" ></span></div>
+					</div>
+				</div>
+				<div class="matchup">
+					<div class="participants">
+						<div class="participant winner"><span id="player3semifinals" ></span></div>
+						<div class="participant"><span id="player4semifinals" ></span></div>
+					</div>
+				</div>
+			</div>
+			<div class="connector">
+				<div class="merger"></div>
+				<div class="line"></div>
+			</div>
+		</div>
+	</section>
+	<section class="round finals">
+		<div class="winners">
+			<div class="matchups">
+				<div class="matchup">
+					<div class="participants">
+						<div class="participant winner"><span id="player1final" ></span></div>
+						<div class="participant"><span id="player2final" ></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="confirmNickname" id="confirmNickname">
+	<p id="confirmNicknamePrompt" data-i18n="confirmNicknamePrompt">Enter every nickname to start !</p>
+	<span class="button" id="confirmButton" data-i18n="confirmButton">Confirm</span>
+	<p id="errorField"></p>
+	<span class="button menu" id="homeButton" data-i18n="homeButton" onclick="navigate('/menu')">Home</span>
+</div>
+
+<div class="startGame" id="startGame">
+	<p id="gameRound" data-i18n="gameRoundQuarterfinals">QUARTERFINALS</p>
+	<p id="playerVsPlayer" data-i18n="playerVsPlayer">player vs player</p>
+	<span class="button" id="startGameButton" data-i18n="startGameButton">Play</span>
+	<p id="infoFieldStartGame"></p>
+	<span class="button" data-i18n="homeButton" id="homeButton"onclick="navigate('/menu')">Home</span>
+</div>
+
+<div class="endGame" id="endGame">
+	<p id="endGameMessage" data-i18n="endGameMessage">Tournament finished !</p>
+	<p id="winnerTournament"data-i18n="winnerTournament">Winner: not defined</p>
+	<span class="button" id="endGameButton"data-i18n="endGameButton">Play again</span>
+	<p id="infoFieldEndGame"></p>
+	<span class="button"data-i18n="homeButton" id="homeButton" onclick="navigate('/menu')">Home</span>
+</div>
+</body>
+
+</html>

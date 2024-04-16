@@ -1,0 +1,33 @@
+.styled-form .form-control {
+    background-color: inherit; /* Same as your page background */
+    border: 2px solid #08A5E2;
+    border-radius: 10px;
+    color: #08A5E2;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+p
+{
+    padding-top: 1vw;
+}
+
+.styled-form .form-control::placeholder {
+    color: #08A5E2;
+    opacity: 1;
+}
+
+.styled-button {
+    background-color: inherit!important; /* Same color as your REGISTER text */
+    color: #FB1075!important; /* Same color as your REGISTER text */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5vw; /* Adjust this value to your liking */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid #FB1075!important;
+
+    border-radius: 10px;
+}

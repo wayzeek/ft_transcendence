@@ -1,0 +1,212 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+	overflow: hidden;
+}
+
+.body {
+    margin: 0;
+	background-color: #08212C;
+	/*overflow: hidden;*/
+}
+
+#pong {
+	display: block;
+}
+
+#notification {
+	display: none;
+	position: fixed;
+	top:  20px;
+	right:  20px;
+	padding:  10px;
+	background-color: #FB1075;
+	color: #FCF1A2;
+	border-radius:  5px;
+	border-color: #FCF1A2;
+}
+  
+#notification p {
+    margin-bottom: -1px;
+}
+
+#notification p:last-child {
+	margin-bottom: 1px;
+}
+
+#transactionLink
+{
+	color: #00ACDD;
+	text-decoration: underline;
+}
+
+@keyframes blink {
+    0% {
+      opacity: .2;
+    }
+    20% {
+      opacity:  1;
+    }
+    100% {
+      opacity: .2;
+    }
+}
+
+.loading span {
+    animation-name: blink;
+    animation-duration:  1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.loading span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.loading span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+@keyframes fadeIn {
+	from { opacity:  0; }
+	to { opacity:  1; }
+}
+  
+@keyframes fadeOut {
+	from { opacity:  1; }
+	to { opacity:  0; }
+}
+  
+.fade-in {
+	animation: fadeIn  1.5s ease-in-out forwards;
+}
+  
+.fade-out {
+	animation: fadeOut  1.5s ease-in-out forwards;
+}
+  
+
+.banner {
+	display: none;
+	position: absolute;
+	top: 55vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	padding: 1em 0;
+
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 3.5vw;
+	color: #F5F6A6;
+	background-color: transparent;
+
+	animation: growShrink 2s infinite;
+}
+
+.end {
+	display: none;
+	position: absolute;
+	top: 55vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	padding: 2em 0;
+
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Press Start 2P', cursive;
+	background-color: transparent;
+}
+
+.end > h2 {
+	font-size: 4vw;
+	margin-bottom: 2em;
+	color: #FB1075;
+}
+
+.end > span {
+	cursor: pointer;
+	font-size: 2.5vw;
+	color: #FFE967;
+}
+
+.end>span:hover, .end>span:focus {
+	color: #FB1075;
+	animation: twinkle 1.5s infinite;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+@keyframes twinkle {
+	0%, 100% {color: #FB1075;}
+	50% {color: #FFE967;}
+}
+
+@keyframes growShrink {
+	/* translate needed */
+	0%, 100% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	50% {
+		transform: translate(-50%, -50%) scale(1.2);
+	}
+}
+
+.score {
+	/*for easy positioning*/
+	display: flex;
+	/*center on width*/
+	justify-content: center;
+	font-weight: bold;
+	font-size: 5.5em;
+
+	font-family: 'Press Start 2P', cursive;
+}
+
+.top-block > hr {
+	color: #08212C;
+	height: 0px;
+	opacity: 1;
+	margin: 0;
+}
+
+.separator {
+	position: absolute;
+	left: 50vw;
+	height: 100vh;
+	border: 0px dashed #08212C;
+}
+
+/*select all direct children of .score*/
+.score > * {
+	/*flex items grow and share available space equally*/
+	flex-grow: 1;
+	flex-basis: 0;
+
+	/*give them personal space horizontally */
+	padding: 0 2vh;
+	/*space them from the top*/
+	margin: 1vh 0;
+	line-height: 1;
+	color: #F5F6A6;
+}
+
+.score > :first-child {
+	text-align: right;
+}
+
+.score > div > * {
+	display: inline-block;
+	padding: 0.15em 0 0 0.1em;
+	border-radius: 15px;
+}
+
+.score > div >#first-score {
+	background-color: #FB1075;
+}
+
+.score > div > #second-score, .score > div > #guest-score {
+	background-color: #00ACDD;
+}
